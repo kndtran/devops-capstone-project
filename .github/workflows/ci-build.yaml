@@ -8,7 +8,7 @@ on:
       - "main"
 jobs:
   build:
-    runs-on: "ubuntu:latest"
+    runs-on: "ubuntu-latest"
     container: "python:3.9-slim"
     services:
       postgres:
@@ -41,4 +41,3 @@ jobs:
         run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=service
         env:
           DATABASE_URI: "postgresql://postgres:pgs3cr3t@postgres:5432/testdb"
-          
